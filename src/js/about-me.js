@@ -13,14 +13,48 @@ document.addEventListener('DOMContentLoaded', function () {
 import Swiper from 'swiper';
 import 'swiper/css';
 
+// document.addEventListener('DOMContentLoaded', () => {
+//   const swiper = new Swiper('.swiper', {
+//     slidesPerView: 'auto', // Автоматична ширина
+//     spaceBetween: 20, // Відступи між елементами
+//     loop: true, // Безкінечне прокручування
+//     navigation: {
+//       nextEl: '.swiper-button-next',
+//       prevEl: '.swiper-button-prev',
+//     },
+//     keyboard: {
+//       enabled: true,
+//       onlyInViewport: true,
+//     },
+//     mousewheel: true,
+//   });
+// });
+
+// document.querySelector('.swiper-button-next').addEventListener('click', () => {
+//   console.log('Клік по кнопці!');
+//   console.log(typeof Swiper);
+//   console.log(swiper.params.navigation);
+
+//   const swiper = new Swiper('.swiper', {
+//     navigation: {
+//       nextEl: '.swiper-button-next',
+//       prevEl: '.swiper-button-prev',
+//     },
+//     slidesPerView: 1,
+//     spaceBetween: 20,
+//     loop: true,
+//   });
+// });
+
 document.addEventListener('DOMContentLoaded', () => {
-  new Swiper('.swiper', {
-    slidesPerView: 'auto', // Автоматична ширина
-    spaceBetween: 20, // Відступи між елементами
-    loop: true, // Безкінечне прокручування
+  const swiper = new Swiper('.swiper', {
+    // ЗБЕРІГАЄМО у ЗМІННУ
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    loop: true,
     navigation: {
       nextEl: '.swiper-button-next',
-      //   prevEl: '.swiper-button-prev',
+      prevEl: '.swiper-button-prev',
     },
     keyboard: {
       enabled: true,
@@ -28,4 +62,12 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     mousewheel: true,
   });
+
+  document
+    .querySelector('.swiper-button-next')
+    .addEventListener('click', () => {
+      console.log('Клік по кнопці!');
+      console.log(swiper.params.navigation); // Тепер змінна swiper визначена
+      swiper.slideNext(); // Додаємо примусовий перехід до наступного слайда
+    });
 });
