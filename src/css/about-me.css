@@ -267,54 +267,66 @@
 /* #endregion accordion */
 
 /* #region swiper */
-.skills-slider {
-  position: relative;
-  width: 100%;
-  max-width: 800px;
-  margin: auto;
-}
 
-.swiper {
-  /* overflow: hidden; */
-}
+@media screen and (min-width: 1440px) {
+  .swiper-container-aboutme {
+    display: flex;
+    gap: 72px;
+    align-items: center;
+    margin-top: 96px;
+    padding: 0 32px;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
 
-.swiper-wrapper .swiper-slide {
-  flex-shrink: 0;
-  width: 200px;
-  height: 200px;
-  display: flex;
-  border-radius: 100px;
-  margin-right: 0 !important;
-}
+  .skills-swiper-about-me {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+  }
+  .swiper-wrapper {
+    display: flex;
+    min-width: 0;
+    width: 260px;
+    user-select: none;
+  }
 
-.swiper-slide {
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #f0f0f0;
-}
+  .swiper-wrapper .swiper-slide {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    border-radius: 100px;
+    margin-right: 0 !important;
+  }
 
-.swiper-slide-active {
-  background-color: #ed3b44;
-  border: none;
-}
+  .swiper-slide {
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #f0f0f0;
+  }
 
-.skills-btm {
-  position: absolute;
-  right: 0px;
-  top: 50%;
-  background-color: #fff;
-  padding: 0;
-  flex-shrink: 0;
-  background-color: #fff0;
-  border: red;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 99;
-}
+  .swiper-slide-active {
+    background-color: #c6e327;
+    border: none;
+  }
 
+  .skills-btm {
+    background-color: #fff;
+    padding: 0;
+    flex-shrink: 0;
+    background-color: #fff0;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
 /* #endregion swiper */

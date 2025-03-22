@@ -47,11 +47,13 @@ import 'swiper/css';
 // });
 
 document.addEventListener('DOMContentLoaded', () => {
-  const swiper = new Swiper('.swiper', {
+  const swiper = new Swiper('.skills-swiper-about-me', {
     // ЗБЕРІГАЄМО у ЗМІННУ
     slidesPerView: 'auto',
     spaceBetween: 20,
     loop: true,
+    initialSlide: 0,
+    centeredSlides: false,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
