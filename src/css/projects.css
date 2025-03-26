@@ -1,0 +1,111 @@
+.projects-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.4);
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.projects-swipper {
+}
+
+.projects-swiper-wrapper .projects-swipper-slide {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 96px;
+}
+
+.projects-swipper-first-part {
+  background-color: #fafafa;
+  width: 688px;
+  height: 625px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 24px;
+  border-top-left-radius: 24px;
+  padding: 64px;
+}
+
+.projects-swipper-list {
+  display: flex;
+  width: 312px;
+  gap: 6px;
+  flex-wrap: nowrap;
+  margin-bottom: 223px;
+}
+
+.projects-swipper-item {
+  border: rgba(28, 29, 32, 0.2) 1px solid;
+  border-radius: 60px;
+  padding: 13px 18px;
+  font-family: Inter Tight, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: #1c1d20;
+}
+
+.projects-swipper-text {
+  font-size: 44px;
+  line-height: 100%;
+  width: 494px;
+  font-family: Inter Tight, sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  color: #1c1d20;
+  text-align: left;
+  margin-bottom: 34px;
+}
+
+.projects-swipper-link {
+  background-color: #ed3b44;
+  padding: 18px 50px;
+  letter-spacing: -0.02em;
+  border-radius: 60px;
+  border: 0;
+  color: #fafafa;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.projects-swipper-second-part {
+  width: 688px;
+  height: 625px;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+  background-color: #242527;
+}
+
+.projects-swipper-img {
+  width: 614px;
+  height: 385px;
+  /* margin-top: 120px;
+  margin-bottom: 120px; */
+  margin: 120px 37px;
+}
+
+.projects-swipper-btn {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.projects-btn-left,
+.projects-btn-right {
+  width: 68px;
+  height: 68px;
+  background-color: #1c1d20;
+  justify-content: center;
+  border: 1px solid rgba(250, 250, 250, 0.5);
+  border-radius: 60px;
+}
+
+.projects-btn-left {
+  rotate: 180deg;
+}
+
+.block {
+  opacity: 0.5;
+}

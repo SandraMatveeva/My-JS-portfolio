@@ -282,6 +282,7 @@
 
   .skills-swiper-about-me {
     width: 1200px;
+    min-width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -294,7 +295,7 @@
     user-select: none;
   }
 
-  .swiper-wrapper .swiper-slide {
+  .swiper-wrapper .about-me-swiper-slide {
     flex-shrink: 0;
     width: 200px;
     height: 200px;
@@ -303,13 +304,13 @@
     margin-right: 0 !important;
   }
 
-  .swiper-slide {
+  .about-me-swiper-slide {
     justify-content: center;
     align-items: center;
     border: 1px solid #f0f0f0;
   }
 
-  .swiper-slide-active {
+  .skills-swiper-about-me .swiper-slide-active {
     background-color: #c6e327;
     border: none;
   }
