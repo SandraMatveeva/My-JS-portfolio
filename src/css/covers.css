@@ -1,0 +1,45 @@
+.covers {
+  background-image: url(../img/Covers/elements_vectors.png);
+  margin-left: auto;
+  margin-right: auto;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  height: 960px;
+}
+
+.covers-cont {
+}
+
+.covers-list {
+  display: flex;
+  gap: 45px;
+  transform: rotate(16deg) translate(-130px) translateY(-490px);
+}
+.covers-item {
+  margin-bottom: 70px;
+
+  display: flex;
+  flex-shrink: 0;
+  animation-name: marqueeLine;
+  animation-duration: 15s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+
+.covers-img {
+  width: 544px;
+  height: 314px;
+}
+
+@keyframes marqueeLine {
+  from {
+    transform: translateX(-20%);
+  }
+
+  to {
+    transform: translateX(-180%);
+  }
+}
