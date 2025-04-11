@@ -19,7 +19,6 @@
 }
 .covers-item {
   margin-bottom: 70px;
-
   display: flex;
   flex-shrink: 0;
   animation-name: marqueeLine;
