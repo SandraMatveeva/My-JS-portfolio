@@ -1,0 +1,88 @@
+.faq-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.4);
+  margin-bottom: 32px;
+}
+
+.faq-list-wr {
+  display: flex;
+}
+
+.faq-list-left {
+  display: block;
+}
+
+.faq-item {
+  /* width: calc((100% - 24px) / 2); */
+  border-top: 1px solid #fafafa33;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  cursor: pointer;
+}
+
+.faq-item.is-active {
+  max-height: 400px; /* максимальна висота для відкритого аккордеона */
+  transition: max-height 0.3s ease;
+}
+
+.faq-item:not(.is-active) {
+  max-height: 104px;
+}
+
+.faq-item.faq-item {
+  border-top: 1px solid #fafafa33;
+  border-right: 1px solid #fafafa33;
+}
+
+.faq-item-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  max-width: 80%;
+}
+
+.faq-btn-svg {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 100px;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  margin-right: 40px;
+  margin-bottom: 10px;
+}
+
+.faq-btn {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.is-active .faq-btn-svg {
+  rotate: 180deg;
+}
+.faq-item-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.6);
+  margin-bottom: 26px;
+  margin-right: 32px;
+}
+
+.faq-list .right-ac {
+  padding-left: 20px;
+  border-right: none;
+  border-left: 1px solid #fafafa33;
+}
+
+.right-ac .faq-btn-svg {
+  margin-right: 0px;
+}
