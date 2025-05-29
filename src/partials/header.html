@@ -27,10 +27,39 @@
     <div>
       <button class="button-order" type="button">Order the project</button>
     </div>
-    <button class="btn-mobile" type="button">
+    <button class="btn-mobile" type="button" data-modal-mob-open>
       <svg width="28" height="28">
         <use href="../img/header-mob/sprite_mob_header.svg#icon-menu-05"></use>
       </svg>
     </button>
+
+    <div class="header-mobile-menu-overlay">
+      <div class="header-mobile-menu">
+        <button
+          class="header-close-menu-btn"
+          type="button"
+          data-modal-mob-close
+        >
+          <svg class="footer-modal-close-icon">
+            <use href="../img/Footer/symbol-defs.svg#icon-x"></use>
+          </svg>
+        </button>
+        <ul class="header-mobile-menu-list">
+          <li class="header-mobile-menu-item">
+            <a href="#about">About me</a>
+          </li>
+          <li class="header-mobile-menu-item">
+            <a href="#benefits">Benefits</a>
+          </li>
+          <li class="header-mobile-menu-item">
+            <a href="#projects">Projects</a>
+          </li>
+          <li class="header-mobile-menu-item">
+            <a href="#faq">FAQ</a>
+          </li>
+        </ul>
+        <a href="#order" class="header-order-btn-modal">Order the project</a>
+      </div>
+    </div>
   </div>
 </header>

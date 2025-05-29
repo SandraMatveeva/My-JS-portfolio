@@ -27,12 +27,6 @@ body {
   padding: 0;
 }
 
-.container {
-  max-width: var(--container-width);
-  margin: 0 auto;
-  padding: var(--padding-global);
-}
-
 h1,
 h2,
 h3,
@@ -74,30 +68,36 @@ li {
   padding: 0;
 }
 
+.container {
+  width: 100%;
+  max-width: 1440px; /* те саме, що var(--container-width) */
+  margin: 0 auto;
+  padding: 32px;
+  overflow: hidden;
+}
+
 /* Responsive Design */
-@media (min-width: 1440px) {
-  .container {
-    max-width: 1380px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1439px) {
-  .container {
-    max-width: 700px;
-    padding: 32px;
-  }
-}
-
-@media (min-width: 375px) and (max-width: 767px) {
+/* @media (min-width: 1440px) {
   .container {
     max-width: 100%;
+  }
+} */
+
+/* @media (max-width: 1439px) {
+  .container {
+    max-width: 1200px; 
+    padding: 32px;
+  }
+} */
+
+@media (max-width: 767px) {
+  .container {
     padding: 32px;
   }
 }
 
 @media (max-width: 374px) {
   .container {
-    max-width: 100%;
     padding: 16px;
   }
 }

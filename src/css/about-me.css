@@ -1,6 +1,7 @@
 /* #region MOB */
 .about-me-first-block {
   display: block;
+  justify-content: center;
   margin-bottom: 96px;
 }
 
