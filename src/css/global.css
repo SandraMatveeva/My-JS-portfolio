@@ -96,7 +96,7 @@ li {
   }
 }
 
-@media (max-width: 374px) {
+@media (max-width: 375px) {
   .container {
     padding: 16px;
   }

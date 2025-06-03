@@ -1,3 +1,5 @@
+/* #region firstBlok */
+
 /* #region MOB */
 .about-me-first-block {
   display: block;
@@ -78,8 +80,14 @@
   }
 
   .about-me-first-block {
-    display: block;
-    margin-bottom: 96px;
+    /* display: block;
+    margin-bottom: 96px; */
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 16px;
   }
 
   .about-me-text {
@@ -105,7 +113,7 @@
   }
   .about-me-img {
     border-radius: 24px;
-    width: 636px;
+    width: 100%;
     height: auto;
   }
 
@@ -184,6 +192,10 @@
     width: 680px;
     height: 700px;
   }
+
+  /* #endregion firstBlok */
+
+  /* #region SecondBlock */
 
   .about-me-accordion-item {
     margin-bottom: 32px;
@@ -267,28 +279,113 @@
 
 /* #endregion accordion */
 
+/* #endregion SecondBlock */
+
 /* #region swiper */
+.swiper-container-aboutme {
+  display: flex;
+  align-items: center;
+  margin-top: 96px;
+  padding: 0;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 55px;
+}
+
+.skills-swiper-about-me {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  width: 260px;
+  min-width: 260px;
+}
+
+.swiper-wrapper {
+  display: flex;
+  min-width: 0;
+  width: 260px;
+  user-select: none;
+}
+
+.swiper-wrapper .about-me-swiper-slide {
+  flex-shrink: 0;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  border-radius: 100px;
+  margin-right: 0 !important;
+}
+
+.about-me-swiper-slide {
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #f0f0f0;
+}
+
+.skills-swiper-about-me .swiper-slide-active {
+  background-color: #c6e327;
+  border: none;
+}
+
+.skills-btm {
+  background-color: #fff;
+  padding: 0;
+  flex-shrink: 0;
+  background-color: #fff0;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .swiper-container-aboutme {
+    gap: 64px;
+    padding: 0 32px;
+  }
+
+  .skills-swiper-about-me {
+    width: 600px;
+    min-width: 600px;
+  }
+
+  .swiper-wrapper .about-me-swiper-slide {
+    width: 200px;
+    height: 200px;
+  }
+
+  .skills-btm {
+    background-color: #fff;
+    padding: 0;
+    flex-shrink: 0;
+    background-color: #fff0;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
 
 @media screen and (min-width: 1440px) {
   .swiper-container-aboutme {
-    display: flex;
     gap: 72px;
-    align-items: center;
-    margin-top: 96px;
-    padding: 0 32px;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: nowrap;
   }
 
   .skills-swiper-about-me {
     width: 1200px;
     min-width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
   }
+
   .swiper-wrapper {
     display: flex;
     min-width: 0;
@@ -314,21 +411,6 @@
   .skills-swiper-about-me .swiper-slide-active {
     background-color: #c6e327;
     border: none;
-  }
-
-  .skills-btm {
-    background-color: #fff;
-    padding: 0;
-    flex-shrink: 0;
-    background-color: #fff0;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
   }
 }
 /* #endregion swiper */
