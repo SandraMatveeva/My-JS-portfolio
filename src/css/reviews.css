@@ -53,3 +53,14 @@
 .block {
   opacity: 0.5;
 }
+
+@media (min-width: 768px) and (max-width: 1439px) {
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+  .reviews-button-left,
+  .reviews-button-right {
+    width: 52px;
+    height: 52px;
+  }
+}

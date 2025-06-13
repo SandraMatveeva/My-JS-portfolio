@@ -90,17 +90,26 @@ li {
   }
 } */
 
-@media (max-width: 767px) {
+/* FOR TABLET */
+@media (max-width: 1439px) {
   .container {
-    padding: 32px;
+    max-width: 768px;
   }
 }
 
-@media (max-width: 375px) {
+/* FOR MOBILE */
+@media (max-width: 767px) {
   .container {
+    max-width: 375px;
     padding: 16px;
   }
 }
+
+/* @media (max-width: 375px) {
+  .container {
+    padding: 16px;
+  }
+} */
 
 .hidden {
   position: absolute;

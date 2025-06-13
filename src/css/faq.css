@@ -1,3 +1,4 @@
+/* global WEB */
 .faq-title {
   font-weight: 600;
   font-size: 16px;
@@ -15,15 +16,20 @@
   display: block;
 }
 
-.faq-item {
-  /* width: calc((100% - 24px) / 2); */
+.accordion .faq-item {
   border-top: 1px solid #fafafa33;
+  border-right: 1px solid #fafafa33;
+  border-left: 1px solid #fafafa33;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   position: relative;
   cursor: pointer;
+}
+
+.faq-item-left {
+  padding-left: 20px;
 }
 
 .faq-item.is-active {
@@ -35,15 +41,10 @@
   max-height: 104px;
 }
 
-.faq-item.faq-item {
-  border-top: 1px solid #fafafa33;
-  border-right: 1px solid #fafafa33;
-}
-
 .faq-item-title {
   font-weight: 600;
   font-size: 20px;
-  line-height: 150%;
+  line-height: 30px;
   letter-spacing: -0.02em;
   color: #fafafa;
   max-width: 80%;
@@ -77,12 +78,89 @@
   margin-right: 32px;
 }
 
-.faq-list .right-ac {
+.faq-item.right-ac {
   padding-left: 20px;
   border-right: none;
-  border-left: 1px solid #fafafa33;
+}
+
+.faq-item.left-ac {
+  border-left: none;
 }
 
 .right-ac .faq-btn-svg {
   margin-right: 0px;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .faq-list-wr {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .accordion .faq-item {
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+  }
+
+  .faq-btn {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .faq-btn-svg {
+    margin-right: 0px;
+  }
+
+  .faq-item-left {
+    padding-left: 0;
+  }
+
+  .faq-item.right-ac {
+    padding-left: 0;
+    border-right: none;
+  }
+}
+
+/* MOB */
+
+@media (min-width: 375px) and (max-width: 767px) {
+  .faq-list-wr {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .accordion .faq-item {
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+  }
+
+  .faq-btn {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .faq-btn-svg {
+    margin-right: 0px;
+  }
+
+  .faq-item-left {
+    padding-left: 0;
+  }
+
+  .faq-item.right-ac {
+    padding-left: 0;
+    border-right: none;
+  }
+
+  .accordion .ac .ac-trigger {
+    display: flex;
+    padding: 20px 0 20px 0;
+  }
+
+  .faq-item:not(.is-active) {
+    max-height: 100%;
+  }
 }

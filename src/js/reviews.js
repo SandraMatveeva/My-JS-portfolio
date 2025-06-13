@@ -6,6 +6,25 @@ document.addEventListener('DOMContentLoaded', () => {
     // ЗБЕРІГАЄМО у ЗМІННУ
     slidesPerView: 4,
     spaceBetween: 16,
+    breakpoints: {
+      // when window width is >= 768px
+      1439: {
+        slidesPerView: 4,
+        spaceBetween: 16,
+      },
+
+      // when window width is >= 768px
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 16,
+      },
+
+      // when window width is >= 375px
+      375: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+      },
+    },
     loop: false,
     initialSlide: 0,
     centeredSlides: false,
