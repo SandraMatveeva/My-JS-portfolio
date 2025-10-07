@@ -23,11 +23,11 @@
 }
 
 .first-accent {
-  color: #c6e327;
+  color: #3c2ea6;
 }
 
 .second-accent {
-  color: gray;
+  color: #0066ff;
 }
 .about-me-img {
   border-radius: 24px;
@@ -69,6 +69,7 @@
   line-height: 1.5;
   letter-spacing: -0.02em;
   color: #fafafa;
+  margin-bottom: 12px;
 }
 
 .accordion-wr-text {
@@ -83,9 +84,6 @@
   }
 
   .about-me-first-block {
-    /* display: block;
-    margin-bottom: 96px; */
-
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -109,11 +107,11 @@
   }
 
   .first-accent {
-    color: #c6e327;
+    color: #3c2ea6;
   }
 
   .second-accent {
-    color: gray;
+    color: #0066ff;
   }
   .about-me-img {
     border-radius: 24px;
@@ -186,11 +184,11 @@
   }
 
   .first-accent {
-    color: #c6e327;
+    color: #3c2ea6;
   }
 
   .second-accent {
-    color: gray;
+    color: #0066ff;
   }
   .about-me-img {
     border-radius: 24px;
@@ -330,7 +328,7 @@
 }
 
 .skills-swiper-about-me .swiper-slide-active {
-  background-color: #c6e327;
+  background-color: #3c2ea6;
   border: none;
 }
 
@@ -414,7 +412,7 @@
   }
 
   .skills-swiper-about-me .swiper-slide-active {
-    background-color: #c6e327;
+    background-color: #3c2ea6;
     border: none;
   }
 }

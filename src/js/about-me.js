@@ -18,16 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // ЗБЕРІГАЄМО у ЗМІННУ
     slidesPerView: 'auto',
     spaceBetween: 0,
-    // breakpoints: {
-    //   680: {
-    //     slidesPerView: 3,
-    //     spaceBetween: 0,
-    //   },
-    //   343: {
-    //     slidesPerView: 2,
-    //     spaceBetween: 0,
-    //   },
-    // },
     loop: true,
     initialSlide: 0,
     centeredSlides: false,

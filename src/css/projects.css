@@ -1,3 +1,5 @@
+/* #region projects global */
+
 .projects-title {
   font-weight: 600;
   font-size: 16px;
@@ -44,7 +46,7 @@
 }
 
 .projects-swipper-link {
-  background-color: #ed3b44;
+  background-color: #3c2ea6;
   padding: 18px 50px;
   letter-spacing: -0.02em;
   border-radius: 60px;
@@ -52,6 +54,10 @@
   color: #fafafa;
   display: inline-block;
   font-size: 16px;
+}
+
+.projects-swipper-link:hover {
+  background: #241a5c;
 }
 
 .projects-swipper-second-part {
@@ -82,7 +88,9 @@
   opacity: 0.5;
 }
 
-/* Mob */
+/* #endregion projects global */
+
+/* #region projects  Mob */
 @media (min-width: 375px) and (max-width: 767px) {
   .projects-swipper-slide {
     display: flex;
@@ -128,7 +136,7 @@
   }
 
   .projects-swipper-link {
-    background-color: #ed3b44;
+    background-color: #3c2ea6;
     padding: 13px 32px;
     letter-spacing: -0.02em;
     border-radius: 60px;
@@ -140,13 +148,13 @@
   .projects-swipper-img {
     width: 311px;
     height: 195px;
-    /* margin-top: 120px;
-  margin-bottom: 120px; */
     margin: 100px 16px;
   }
 }
 
-/* Tablet */
+/* #endregion projects  Mob */
+
+/* #region projects  TABLET */
 @media (min-width: 768px) and (max-width: 1439px) {
   .projects-swipper-slide {
     display: flex;
@@ -186,8 +194,9 @@
     margin: 0 auto;
   }
 }
+/* #endregion projects  TABLET */
 
-/* Web */
+/* #region projects  WEB */
 
 @media only screen and (min-width: 1440px) {
   .projects-swiper-wrapper .projects-swipper-slide {
@@ -215,3 +224,5 @@
     border-bottom-right-radius: 24px;
   }
 }
+
+/* #endregion projects  WEB */

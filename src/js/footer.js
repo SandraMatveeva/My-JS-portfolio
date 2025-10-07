@@ -34,9 +34,119 @@ backdropEl.addEventListener('click', e => {
   }
 });
 
-// 📩 Відкриття модалки після submit
-form.addEventListener('submit', e => {
-  e.preventDefault(); // не перезавантажуємо сторінку
-  openModal();
-  form.reset(); // очистити форму (за бажанням)
-});
+// // 📩 Відкриття модалки після submit
+// form.addEventListener('submit', e => {
+//   e.preventDefault(); // не перезавантажуємо сторінку
+//   openModal();
+//   form.reset(); // очистити форму (за бажанням)
+// });
+
+// // Отримуємо форму
+// const footerForm = document.getElementById('footerForm');
+
+// if (footerForm) {
+//   footerForm.addEventListener('submit', e => {
+//     e.preventDefault();
+
+//     const data = {
+//       email: footerForm.querySelector("input[name='email']").value.trim(),
+//       comments: footerForm.querySelector("input[name='comments']").value.trim(),
+//     };
+
+//     console.log('✅ Введені дані:', data);
+//     console.log(footerForm.querySelectorAll('input'));
+//   });
+// }
+
+// // перевірка
+// footerForm.addEventListener('submit', e => {
+//   e.preventDefault();
+//   console.log('📩 Сабміт відпрацював!');
+
+//   const inputs = footerForm.querySelectorAll('input');
+//   inputs.forEach(input => {
+//     console.log(`${input.name}:`, input.value);
+//     console.log('Форма, з якою працюємо:', footerForm);
+//   });
+// });
+
+const footerForm = document.getElementById('footerForm'); //знаходимо форму в HTML
+const modalBackdrop = document.querySelector('.backdrop'); //знаходимо модалку (вікно “Thank you…”)
+
+if (footerForm) {
+  //перевіряємо, що форма справді існує
+  footerForm.addEventListener('submit', e => {
+    //слухаємо подію “submit” (натискання кнопки “Send”)
+    e.preventDefault(); // щоб браузер перезавантажив сторінку
+
+    const emailValue = footerForm
+      .querySelector("input[name='email']")
+      .value.trim();
+    const commentsValue = footerForm
+      .querySelector("input[name='comments']")
+      .value.trim(); //зчитуємо значення з полів
+
+    const data = { email: emailValue, comments: commentsValue }; //створюємо зручний об’єкт із даними
+    console.log('📩 Введені дані:', data);
+
+    // Відправка на сервер
+    fetch('http://localhost:3001/send', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    })
+      .then(res => res.json())
+      .then(result => {
+        if (result.success) {
+          console.log('✅ Дані успішно відправлені на сервер!');
+          if (modalBackdrop) {
+            modalBackdrop.classList.add('is-open');
+            document.body.style.overflow = 'hidden';
+          }
+          footerForm.reset();
+        } else {
+          console.error('❌ Сервер не прийняв дані');
+        }
+      })
+      .catch(err => console.error('🚨 Помилка при запиті:', err));
+
+    // Відкриваємо модалку тільки після зчитування даних
+    if (modalBackdrop) {
+      //відкриваємо модалку “Thank you”
+      modalBackdrop.classList.add('is-open'); //додає клас, який у CSS робить модалку видимою
+      document.body.style.overflow = 'hidden'; //забороняє скрол сторінки, поки модалка відкрита
+    }
+
+    // Очищаємо форму (за бажанням)
+    footerForm.reset(); //робить усі інпути порожніми — форма готова для наступного користувача.
+  });
+}
+
+// Закриття модалки
+const modalCloseBtn = document.querySelector('[data-modal-close]');
+if (modalCloseBtn && modalBackdrop) {
+  modalCloseBtn.addEventListener('click', () => {
+    //натискаємо хрестик на модальці
+    modalBackdrop.classList.remove('is-open'); //видаляється клас
+    document.body.style.overflow = ''; //повертає можливість скролити сторінку
+  });
+}
+
+// //Підключаємо форму до сервера
+// fetch('http://localhost:3001/send', {
+//   method: 'POST',
+//   headers: { 'Content-Type': 'application/json' },
+//   body: JSON.stringify(data),
+// })
+//   .then(res => res.json())
+//   .then(result => {
+//     if (result.success) {
+//       console.log('✅ Дані успішно відправлені на сервер!');
+//       modalBackdrop.classList.add('is-open');
+//       document.body.style.overflow = 'hidden';
+//       footerForm.reset();
+//     } else {
+//       console.error('❌ Сервер не прийняв дані');
+//     }
+//   })
+//   .catch(err => console.error('🚨 Помилка при запиті:', err));

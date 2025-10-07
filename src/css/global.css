@@ -76,20 +76,6 @@ li {
   overflow: hidden;
 }
 
-/* Responsive Design */
-/* @media (min-width: 1440px) {
-  .container {
-    max-width: 100%;
-  }
-} */
-
-/* @media (max-width: 1439px) {
-  .container {
-    max-width: 1200px; 
-    padding: 32px;
-  }
-} */
-
 /* FOR TABLET */
 @media (max-width: 1439px) {
   .container {
@@ -104,12 +90,6 @@ li {
     padding: 16px;
   }
 }
-
-/* @media (max-width: 375px) {
-  .container {
-    padding: 16px;
-  }
-} */
 
 .hidden {
   position: absolute;

@@ -52,7 +52,6 @@
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.3s ease, visibility 0.3s ease;
-  /* background-color: #77852a50; */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -62,8 +61,8 @@
   visibility: visible;
   opacity: 1;
   pointer-events: auto;
-  background: rgb(0, 255, 81);
-  background-image: url(../img/header-mob/Glass\ effect\ 1.png);
+  background: #3c2ea6;
+  background-image: url(../img/Hero.jpg);
 }
 
 .header-mobile-menu {
@@ -116,7 +115,7 @@
   border-radius: 60px;
   padding: 14px 31px;
   width: 164px;
-  background: #c6e327;
+  background: #3c2ea6;
   transition: box-shadow 0s ease-in-out, background-color 0.8s ease-in-out;
   font-weight: 500;
   font-size: 14px;
@@ -126,7 +125,7 @@
 }
 
 .header-order-btn-modal:hover {
-  background: #596808;
+  background: #241a5c;
 }
 /* #endregion MOBILE Header */
 
@@ -145,7 +144,7 @@
   }
 
   .btn-menu-header:hover {
-    color: #c6e327;
+    color: #241a5c;
   }
 
   .nav-menu-list {
@@ -179,17 +178,18 @@
   }
 
   .nav-menu-link:hover {
-    color: #c6e327;
+    color: #3c2ea6;
   }
 
   .button-order {
     padding: 18px 24px;
-    background: #c6e327;
+    border-radius: 28px;
+    background: #3c2ea6;
     transition: box-shadow 0s ease-in-out, background-color 0.8s ease-in-out;
   }
 
   .button-order:hover {
-    background: #596808;
+    background: #241a5c;
   }
 
   .btn-mobile {
@@ -216,7 +216,7 @@
   }
 
   .btn-menu-header:hover {
-    color: #c6e327;
+    color: #3c2ea6;
   }
 
   .nav-menu-list {
@@ -250,17 +250,18 @@
   }
 
   .nav-menu-link:hover {
-    color: #c6e327;
+    color: #3c2ea6;
   }
 
   .button-order {
     padding: 18px 24px;
-    background: #c6e327;
+    border-radius: 28px;
+    background: #3c2ea6;
     transition: box-shadow 0s ease-in-out, background-color 0.8s ease-in-out;
   }
 
   .button-order:hover {
-    background: #596808;
+    background: #241a5c;
   }
 
   .btn-mobile {

@@ -1,4 +1,4 @@
-/* global WEB */
+/* #region global WEB */
 .faq-title {
   font-weight: 600;
   font-size: 16px;
@@ -91,6 +91,10 @@
   margin-right: 0px;
 }
 
+/* #endregion global WEB */
+
+/* #region TABLET */
+
 @media (min-width: 768px) and (max-width: 1439px) {
   .faq-list-wr {
     display: flex;
@@ -123,7 +127,9 @@
   }
 }
 
-/* MOB */
+/* #endregion TABLET */
+
+/* #region MOB */
 
 @media (min-width: 375px) and (max-width: 767px) {
   .faq-list-wr {
@@ -164,3 +170,5 @@
     max-height: 100%;
   }
 }
+
+/* #endregion MOB */

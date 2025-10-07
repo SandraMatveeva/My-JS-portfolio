@@ -28,10 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
     loop: false,
     initialSlide: 0,
     centeredSlides: false,
-    // navigation: {
-    //   nextEl: '.swiper-button-next',
-    //   prevEl: '.swiper-button-prev',
-    // },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
     keyboard: {
       enabled: true,
       onlyInViewport: true,

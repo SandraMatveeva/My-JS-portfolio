@@ -1,3 +1,5 @@
+/* #region global reviews WEB */
+
 .reviews-title {
   font-weight: 600;
   font-size: 16px;
@@ -10,7 +12,6 @@
 
 .reviews-list {
   display: flex;
-  /* gap: 16px; */
   margin-bottom: 32px;
 }
 .reviews-swiper-wrapper .reviews-item {
@@ -54,9 +55,15 @@
   opacity: 0.5;
 }
 
+/* #endregion global reviews WEB */
+
+/* #region reviews TABLET */
+
 @media (min-width: 768px) and (max-width: 1439px) {
 }
+/* #endregion reviews TABLET */
 
+/* #region reviews MOB */
 @media (min-width: 375px) and (max-width: 767px) {
   .reviews-button-left,
   .reviews-button-right {
@@ -64,3 +71,4 @@
     height: 52px;
   }
 }
+/* #endregion reviews MOB */
