@@ -34,42 +34,6 @@ backdropEl.addEventListener('click', e => {
   }
 });
 
-// // 📩 Відкриття модалки після submit
-// form.addEventListener('submit', e => {
-//   e.preventDefault(); // не перезавантажуємо сторінку
-//   openModal();
-//   form.reset(); // очистити форму (за бажанням)
-// });
-
-// // Отримуємо форму
-// const footerForm = document.getElementById('footerForm');
-
-// if (footerForm) {
-//   footerForm.addEventListener('submit', e => {
-//     e.preventDefault();
-
-//     const data = {
-//       email: footerForm.querySelector("input[name='email']").value.trim(),
-//       comments: footerForm.querySelector("input[name='comments']").value.trim(),
-//     };
-
-//     console.log('✅ Введені дані:', data);
-//     console.log(footerForm.querySelectorAll('input'));
-//   });
-// }
-
-// // перевірка
-// footerForm.addEventListener('submit', e => {
-//   e.preventDefault();
-//   console.log('📩 Сабміт відпрацював!');
-
-//   const inputs = footerForm.querySelectorAll('input');
-//   inputs.forEach(input => {
-//     console.log(`${input.name}:`, input.value);
-//     console.log('Форма, з якою працюємо:', footerForm);
-//   });
-// });
-
 const footerForm = document.getElementById('footerForm'); //знаходимо форму в HTML
 const modalBackdrop = document.querySelector('.backdrop'); //знаходимо модалку (вікно “Thank you…”)
 
@@ -132,21 +96,4 @@ if (modalCloseBtn && modalBackdrop) {
   });
 }
 
-// //Підключаємо форму до сервера
-// fetch('http://localhost:3001/send', {
-//   method: 'POST',
-//   headers: { 'Content-Type': 'application/json' },
-//   body: JSON.stringify(data),
-// })
-//   .then(res => res.json())
-//   .then(result => {
-//     if (result.success) {
-//       console.log('✅ Дані успішно відправлені на сервер!');
-//       modalBackdrop.classList.add('is-open');
-//       document.body.style.overflow = 'hidden';
-//       footerForm.reset();
-//     } else {
-//       console.error('❌ Сервер не прийняв дані');
-//     }
-//   })
-//   .catch(err => console.error('🚨 Помилка при запиті:', err));
+
